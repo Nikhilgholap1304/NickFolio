@@ -38,6 +38,8 @@ export default {
         sans: ["var(--font-sora)", ...fontFamily.sans],
         code: "var(--font-code)",
         grotesk: "var(--font-grotesk)",
+        Poetsen_One: ["Poetsen One"],
+        Concert: ["Concert One"]
       },
       letterSpacing: {
         tagline: ".15em",
