@@ -1,6 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import Logo from "./assets/Nickfolio_icon_colored.png";
 import { navigation } from "./Constants";
+import Button from "./components/Button";
+import ButtonGradient from "./assets/svg/ButtonGradient";
 
 function App() {
   const pathname = useLocation();
@@ -24,42 +26,35 @@ function App() {
             <h1 className=" text-xl font-black">NickFolio</h1>
           </a>
           <div className=" flex items-center justify-between m-auto">
-            {/* <p className=" cursor-pointer font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold lg:leading-5 lg:hover:text-n-1 xl:px-12 lg:text-n-1/50">About</p>
-            <p className=" cursor-pointer font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold lg:leading-5 lg:hover:text-n-1 xl:px-12 lg:text-n-1/50">Projects</p>
-            <p className=" cursor-pointer font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold lg:leading-5 lg:hover:text-n-1 xl:px-12 lg:text-n-1/50">Skills</p>
-            <p className=" cursor-pointer font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold lg:leading-5 lg:hover:text-n-1 xl:px-12 lg:text-n-1/50">Testimonials</p>
-            <p className=" cursor-pointer font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold lg:leading-5 lg:hover:text-n-1 xl:px-12 lg:text-n-1/50">Contact</p> */}
             {navigation.map((item) => (
               <a
                 key={item.id}
                 href={item.url}
                 className={`cursor-pointer font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 
-              ${item.onlyMobile ? 'lg:hidden':''} px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold lg:leading-5 lg:hover:text-n-1 xl:px-12 ${
-                item.url === pathname.hash
-                  ? 'z-2 lg:text-n-1'
-                  : 'lg:text-n-1/50'
-              } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
+              ${
+                item.onlyMobile ? "lg:hidden" : ""
+              } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold lg:leading-5 lg:hover:text-n-1 xl:px-8 ${
+                  item.url === pathname.hash
+                    ? "z-2 lg:text-n-1"
+                    : "lg:text-n-1/50"
+                } lg:leading-5 lg:hover:text-n-1`}
               >
                 {item.title}
               </a>
             ))}
           </div>
-          <div className="flex gap-4">
-            <Link
-              className=" bg-violet-950 text-sm opacity-80 rounded px-2 py-1"
-              to="/Signup"
-            >
-              Sign up
-            </Link>
-            <Link
-              className="bg-violet-950 text-sm opacity-80 rounded px-2 py-1"
-              to="/login"
-            >
-              Login
-            </Link>
-          </div>
+          <a
+            href="#signup"
+            className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
+          >
+            New account
+          </a>
+          <Button className="hidden lg:flex" href="#login">
+            Sign in
+          </Button>
         </header>
       </div>
+      <ButtonGradient />
     </>
   );
 }
