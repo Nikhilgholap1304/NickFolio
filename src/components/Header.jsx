@@ -33,15 +33,20 @@ const Header = () => {
     }
   };
   const handleClick = () => {
+    const nav = document.getElementById("nav");
     if (!openNavigation) return;
 
+    nav.style.opacity = 0;
+    setTimeout(() => {
+      setOpenNavigation(false);
+      nav.style.visibility = "hidden";
+    }, 300);
     enablePageScroll();
-    setOpenNavigation(false);
   };
   return (
     <>
       <header
-        className={`fixed z-50 left-0 top-0 w-full flex px-5 max-lg:py-4 justify-between items-center border-b border-n-6 lg:bg-n-8/90 
+        className={`fixed z-50 left-0 top-0 w-full flex px-5 lg:py-[0.2rem] py-[1rem] 2xs:py-[1rem] max-lg:py-4 justify-between items-center border-b border-n-6 lg:bg-n-8/90 
         lg:backdrop-blur-sm
         lg:px-7.5 ${openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"}`}
       >
@@ -61,8 +66,8 @@ const Header = () => {
           </motion.div>
           <motion.h1
             className=" text-2xl font-black font-Concert"
-            initial={{ opacity: 0, x: -10 }} // Initial opacity and x-axis motion
-            animate={{ opacity: 1, x: 0 }} // Animation on load
+            initial={{ opacity: 0, x: -10 }} 
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             NickFolio
@@ -71,7 +76,7 @@ const Header = () => {
         <motion.nav
           className={`${
             openNavigation ? "flex" : "hidden"
-          } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent invisible lg:visible transition-opacity opacity-0 lg:opacity-100`}
+          } fixed top-[4.78rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent invisible lg:visible transition-opacity opacity-0 lg:opacity-100`}
           id="nav"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
