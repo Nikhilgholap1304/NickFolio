@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import Logo from "../assets/Nickfolio_icon_colored.png";
-import { navigation } from "../Constants";
+import { navigation } from "../constants";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "../design/Header";
@@ -9,6 +9,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import Reveal from "./Reveal";
 
 const Header = () => {
   const pathname = useLocation();
@@ -66,7 +67,7 @@ const Header = () => {
           </motion.div>
           <motion.h1
             className=" text-2xl font-black font-Concert"
-            initial={{ opacity: 0, x: -10 }} 
+            initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
@@ -78,14 +79,6 @@ const Header = () => {
             openNavigation ? "flex" : "hidden"
           } fixed top-[4.78rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent invisible lg:visible transition-opacity opacity-0 lg:opacity-100`}
           id="nav"
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            type: "spring",
-            stiffness: 100,
-            damping: 10,
-            delay: 0.5,
-          }}
         >
           <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
             {navigation.map((item) => (
@@ -105,7 +98,7 @@ const Header = () => {
                    : "lg:text-n-1/50"
                } lg:leading-5 lg:hover:text-n-1`}
               >
-                {item.title}
+                <Reveal>{item.title}</Reveal>
               </a>
             ))}
           </div>

@@ -1,12 +1,39 @@
 import Section from "./Section";
 import Coder from "../assets/Coder.png";
 import curve from "../assets/hero/curve.png";
-import { motion, AnimatePresence, useCycle } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useCycle,
+  useMotionTemplate,
+  useMotionValue,
+  animate,
+} from "framer-motion";
 import { BackgroundCircles, BottomLine, Gradient } from "../design/Hero";
 import { ScrollParallax } from "react-just-parallax";
 import { useEffect, useRef } from "react";
+import Reveal from "./Reveal";
+const COLORS = [
+  "rgb(48 7 125)",
+  "rgb(60 3 45)",
+  "rgb(60 3 3)",
+  "rgb(58 57 3)",
+  "rgb(3 55 36)",
+];
 const Hero = () => {
   const parallaxRef = useRef(null);
+  const color = useMotionValue(COLORS[0]);
+  const backgroundImage = useMotionTemplate`radial-gradient(100% 100% at 50% 10%, ${color}, rgb(9 9 9 / 0%) 50%)`;
+
+  useEffect(() => {
+    animate(color, COLORS, {
+      ease: "easeInOut",
+      duration: 30,
+      repeat: Infinity,
+      repeatType: "mirror",
+    });
+  });
+
   return (
     <>
       <Section
@@ -16,6 +43,12 @@ const Hero = () => {
         customPaddings
         id="hero"
       >
+        <motion.div
+          style={{
+            backgroundImage,
+          }}
+          className="absolute -top-10 left-0 bottom-0 w-full grid h-50 place-content-center -z-1 opacity-50"
+        ></motion.div>
         <div
           className="relative flex flex-col items-center justify-between px-7.5 lg:flex-row sm:gap-1 gap-[2.5rem]"
           ref={parallaxRef}
@@ -80,7 +113,7 @@ const Hero = () => {
               </span>
             </h1>
             <p className="body-1 mt-4 relative text-nowrap">
-              An Aspiring Full-Stack Developer
+              <Reveal>An Aspiring Full-Stack Developer</Reveal>
               <motion.span
                 drag
                 dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
@@ -100,7 +133,13 @@ const Hero = () => {
             </p>
           </div>
           <div className="xl:w-[35rem] lg:w-[25rem] md:w-[32rem] h-auto relative z-1">
-            <img src={Coder} alt="" className="w-full h-auto drop-shadow-xl" />
+            <Reveal>
+              <img
+                src={Coder}
+                alt=""
+                className="w-full h-auto drop-shadow-xl"
+              />
+            </Reveal>
           </div>
         </div>
       </Section>
