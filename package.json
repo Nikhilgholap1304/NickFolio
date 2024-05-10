@@ -18,6 +18,7 @@
     "react-dom": "^18.2.0",
     "react-just-parallax": "^3.1.16",
     "react-router-dom": "^6.23.0",
+    "react-spinners": "^0.13.8",
     "scroll-lock": "^2.1.5"
   },
   "devDependencies": {
