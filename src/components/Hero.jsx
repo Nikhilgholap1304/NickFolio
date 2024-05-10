@@ -3,6 +3,7 @@ import Coder from "../assets/Coder.png";
 import curve from "../assets/hero/curve.png";
 import { motion, AnimatePresence, useCycle } from "framer-motion";
 import { BackgroundCircles, BottomLine, Gradient } from "../design/Hero";
+import { ScrollParallax } from "react-just-parallax";
 import { useEffect, useRef } from "react";
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -19,8 +20,10 @@ const Hero = () => {
           className="relative flex flex-col items-center justify-between px-7.5 lg:flex-row sm:gap-1 gap-[2.5rem]"
           ref={parallaxRef}
         >
-          <div className="absolute w-full h-full top-0 left-0 z-2 pointer-events-none select-none">
-            <BackgroundCircles/>
+          <div className="absolute w-full h-full top-0 left-0 z-2 pointer-events-none select-none lg:overflow-visible overflow-hidden">
+            <ScrollParallax isAbsolutelyPositioned>
+              <BackgroundCircles />
+            </ScrollParallax>
           </div>
           <div className="max-w-[30rem] lg:ml-[4rem] xs:mr-[5rem] 2xs:mr-0">
             <h1 className="h1 relative text-nowrap">
@@ -29,7 +32,7 @@ const Hero = () => {
                 <motion.span
                   drag
                   dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-                  initial={{ x: 350, y: -100, rotate: 120 }}
+                  initial={{ x: 350, y: -50, rotate: 120 }}
                   animate={{ x: 0, y: 0, rotate: 0 }}
                   transition={{ delay: 2, duration: 2 }}
                   className="text-color-2 cursor-pointer absolute z-2"
