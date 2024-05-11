@@ -15,9 +15,9 @@ function App() {
         <About/>
       </div>
 
-      <div className="absolute inset-0 z-0 pointer-events-none select-none cursor-none">
+      <div className="fixed inset-0 z-0 pointer-events-none select-none cursor-none">
         <Canvas style={{ pointerEvents: "none !important" }}>
-          <Stars radius={50} count={500} factor={4} fade speed={1} />
+          <Stars radius={50} count={500} factor={2} fade speed={1} />
         </Canvas>
       </div>
       <ButtonGradient />
