@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import About from "./components/About";
 import ButtonGradient from "./assets/svg/ButtonGradient";
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
@@ -11,6 +12,7 @@ function App() {
       <div className=" relative w-screen h-screen">
         <Header />
         <Hero />
+        <About/>
       </div>
 
       <div className="absolute inset-0 z-0 pointer-events-none select-none cursor-none">

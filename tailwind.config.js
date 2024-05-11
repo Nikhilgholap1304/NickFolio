@@ -43,7 +43,8 @@ export default {
         code: "var(--font-code)",
         grotesk: "var(--font-grotesk)",
         Poetsen_One: ["Poetsen One"],
-        Concert: ["Concert One"]
+        Concert: ["Concert One"],
+        Poppins: ["Poppins"]
       },
       letterSpacing: {
         tagline: ".15em",
