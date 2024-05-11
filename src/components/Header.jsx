@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import Logo from "../assets/Nickfolio_icon_colored.png";
-import { navigation } from "../constants";
+import { navigation } from "../constants/index";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "../design/Header";
