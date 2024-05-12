@@ -8,6 +8,7 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaTelegram } from "react-icons/fa6";
 import Reveal from "./Reveal";
 import TiltMeCard from "./TiltMeCard";
+import Roller from "./Roller";
 
 const About = () => {
   return (
@@ -22,7 +23,7 @@ const About = () => {
             About&nbsp;<span className="text-violet-500">.</span>
           </Reveal>
         </h1>
-        <span className="w-full bg-violet-50 opacity-50 h-[1px] rounded"></span>
+        <Roller />
       </div>
       <div className="flex flex-col relative lg:items-start items-center justify-center lg:flex-row lg:justify-between">
         {/* <div className="xl:max-w-[20rem] h-[auto] rounded overflow-hidden lg:max-w-[15rem] lg:mb-auto mb-9 relative sm: max-w-[20rem] xs:w-[15rem]">

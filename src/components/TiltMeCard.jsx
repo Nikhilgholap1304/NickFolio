@@ -2,6 +2,7 @@ import React from "react";
 import Reveal from "./Reveal";
 import Me from "../assets/Me/Me2.jpg";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { ScrollParallax } from "react-just-parallax";
 
 const TiltMeCard = () => {
   const x = useMotionValue(0);
@@ -40,26 +41,28 @@ const TiltMeCard = () => {
   const handleMouseLeave = () => {
     x.set(0);
     y.set(0);
-  }
+  };
 
   return (
     <motion.div
-      className="xl:max-w-[20rem] h-[auto] rounded lg:max-w-[15rem] lg:mb-auto mb-9 relative sm: max-w-[20rem] xs:w-[15rem]"
-      style={{transformStyle: "preserve-3d", rotateX, rotateY}}
+      className="xl:max-w-[20rem] h-[auto] rounded lg:max-w-[15rem] lg:mb-auto mb-9 relative sm:max-w-[20rem] xs:w-[15rem] 2xs:max-w-[80%]"
+      style={{ transformStyle: "preserve-3d", rotateX, rotateY }}
     >
       <Reveal>
         <img
           src={Me}
           alt="me"
-          className="w-full rounded object-cover inset-0"
+          className="w-full rounded object-cover inset-0 shadow-lg"
         />
       </Reveal>
-      <motion.div
-        className="absolute w-full h-full top-10 left-10 bg-violet-500 -z-1 rounded "
-        style={{transformStyle: "preserve-3d"}}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-      ></motion.div>
+      <ScrollParallax isAbsolutelyPositioned zIndex={-1}>
+        <motion.div
+          className="absolute w-full h-full lg:top-12 lg:left-10 top-6 left-6 bg-violet-500 -z-1 rounded shadow-lg"
+          style={{ transformStyle: "preserve-3d" }}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+        ></motion.div>
+      </ScrollParallax>
     </motion.div>
   );
 };
