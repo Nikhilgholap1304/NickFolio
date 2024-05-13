@@ -50,7 +50,7 @@ const Header = () => {
     <>
       <header
         className={`fixed z-50 left-0 top-0 w-full flex px-5 lg:py-[0.2rem] py-[1rem] 2xs:py-[1rem] max-lg:py-4 justify-between items-center border-b border-n-6 lg:bg-n-8/90 
-        lg:backdrop-blur-sm
+        lg:backdrop-blur-sm transition-all
         lg:px-7.5 ${openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"}`}
       >
         <motion.a className=" flex gap-[0.5rem] items-center" href="#hero">
