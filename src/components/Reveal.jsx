@@ -15,7 +15,7 @@ const Reveal = ({ children }) => {
   });
 
   return (
-    <div ref={ref} className="relative overflow-hidden w-full">
+    <div ref={ref} className="relative w-full">
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },

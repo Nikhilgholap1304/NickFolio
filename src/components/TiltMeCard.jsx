@@ -47,20 +47,41 @@ const TiltMeCard = () => {
     <motion.div
       className="xl:max-w-[20rem] h-[auto] rounded lg:max-w-[15rem] lg:mb-auto mb-9 relative sm:max-w-[20rem] xs:w-[15rem] 2xs:max-w-[80%]"
       style={{ transformStyle: "preserve-3d", rotateX, rotateY }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
     >
       <Reveal>
-        <img
+        <motion.img
           src={Me}
           alt="me"
           className="w-full rounded object-cover inset-0 shadow-lg"
+          drag
+        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
         />
       </Reveal>
       <ScrollParallax isAbsolutelyPositioned zIndex={-1}>
         <motion.div
           className="absolute w-full h-full lg:top-12 lg:left-10 top-6 left-6 bg-violet-500 -z-1 rounded shadow-lg"
           style={{ transformStyle: "preserve-3d" }}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
+          initial={{
+            opacity: 0,
+            y:5
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 10,
+            duration: 0.5,
+            delay: 0.5,
+          }}
+          whileInView={{
+            opacity: 1,
+            y:0,
+            once: true,
+          }}
+          viewport={{
+            once:true
+          }}
         ></motion.div>
       </ScrollParallax>
     </motion.div>

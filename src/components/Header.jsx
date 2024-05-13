@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import Logo from "../assets/Nickfolio_icon_colored.png";
@@ -6,7 +7,7 @@ import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "../design/Header";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Reveal from "./Reveal";
@@ -14,6 +15,7 @@ import Reveal from "./Reveal";
 const Header = () => {
   const pathname = useLocation();
   const [openNavigation, setOpenNavigation] = useState(false);
+  const { ref, inView } = useInView({ threshold: 0.5 });
 
   const toggleNavigation = () => {
     const nav = document.getElementById("nav");
@@ -83,6 +85,7 @@ const Header = () => {
           <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
             {navigation.map((item) => (
               <a
+                ref={ref}
                 key={item.id}
                 href={item.url}
                 onClick={handleClick}
