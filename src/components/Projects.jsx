@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Roller from "./Roller";
 import Section from "./Section";
 import Reveal from "./Reveal";
@@ -7,9 +7,20 @@ import { motion, useAnimation } from "framer-motion";
 import { FaGithub } from "react-icons/fa6";
 import { MdExitToApp } from "react-icons/md";
 import { PiArrowRightFill } from "react-icons/pi";
+import Modal from "./Modal";
 
 const Projects = () => {
+  const [modelOpen, setModelOpen] = useState(false);
+  const [projectDetail, setProjectDetail] = useState({});
   const controls = useAnimation();
+  const handleModal = (item) => {
+    if(modelOpen){
+      setModelOpen(false);
+    } else {
+      setModelOpen(true);
+      setProjectDetail({item});
+    }
+  };
   return (
     <>
       <Section
@@ -30,6 +41,7 @@ const Projects = () => {
               <div
                 key={item.id}
                 className="w-full aspect-video z-1 rounded-lg cursor-pointer relative overflow-hidden bg-[#232323] group"
+                onClick={() => handleModal(item)}
               >
                 <motion.img
                   key={item.id}
@@ -85,7 +97,7 @@ const Projects = () => {
                   {item.tools.map((tool, index) => (
                     <motion.p
                       key={index}
-                      className="bg-[#232323] text-violet-400 px-2 py-1 rounded"
+                      className="bg-[#232323] text-violet-400 px-2 py-1 rounded shadow-lg"
                       initial={{
                         x: 0,
                         y: 0,
@@ -130,6 +142,7 @@ const Projects = () => {
           ))}
         </div>
       </Section>
+      <Modal open={modelOpen} projectDetail={projectDetail} onClick={handleModal} />
     </>
   );
 };
