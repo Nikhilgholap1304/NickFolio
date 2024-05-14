@@ -47,7 +47,7 @@ const Projects = () => {
               <div key={item.id} className="my-4">
                 <div className="flex justify-between items-center gap-3 md:text-2xl text-[1.3rem]">
                   <h4 className="font-Poppins font-bold flex-shrink-0 text-nowrap">
-                    {item.title}
+                    <Reveal>{item.title}</Reveal>
                   </h4>
                   <div className="w-full h-[1px] opacity-30 bg-[#ebecf3]"></div>
                   <motion.a
@@ -60,7 +60,9 @@ const Projects = () => {
                       y: 3,
                     }}
                   >
-                    <FaGithub className="md:h-[2rem] md:w-[2rem] h-[1.2rem] w-[1.2rem]" />
+                    <Reveal>
+                      <FaGithub className="md:h-[2rem] md:w-[2rem] h-[1.2rem] w-[1.2rem]" />
+                    </Reveal>
                   </motion.a>
                   <motion.a
                     href={item.link.live}
@@ -72,27 +74,58 @@ const Projects = () => {
                       y: 3,
                     }}
                   >
-                    <MdExitToApp className="md:h-[2rem] md:w-[2rem] h-[1.4rem] w-[1.4rem]" />
+                    <Reveal>
+                      <MdExitToApp className="md:h-[2rem] md:w-[2rem] h-[1.4rem] w-[1.4rem]" />
+                    </Reveal>
                   </motion.a>
                 </div>
               </div>
-              <div className="flex flex-wrap gap-4 my-2 md:text-lg text-[1rem] text-white">
-                {item.tools.map((tool, index) => (
-                  <p
-                    key={index}
-                    className="bg-[#232323] text-violet-400 px-2 py-1 rounded"
-                  >
-                    {tool}
-                  </p>
-                ))}
-              </div>
-              <div className=" font-Poppins font-extralight md:text-xl text-[1.1rem] text-[#ebecf3] mt-4">
-                {item.shortdesc} &nbsp;
-                <motion.span className="text-violet-400  font-light items-center gap-1 inline-flex cursor-pointer underline group">
-                  Learn more
-                  <PiArrowRightFill className="group-hover:translate-x-1 transition-transform" />
-                </motion.span>
-              </div>
+              <Reveal>
+                <div className="flex flex-wrap gap-4 my-2 md:text-lg text-[1rem] text-white">
+                  {item.tools.map((tool, index) => (
+                    <motion.p
+                      key={index}
+                      className="bg-[#232323] text-violet-400 px-2 py-1 rounded"
+                      initial={{
+                        x: 0,
+                        y: 0,
+                      }}
+                      animate={controls}
+                      whileHover={{
+                        x: Math.random() * 50 - 25,
+                        y: Math.random() * 50 - 25,
+                        transition: {
+                          type: "spring",
+                          stiffness: 200,
+                          damping: 20,
+                        },
+                      }}
+                      onMouseLeave={() => {
+                        controls.start({
+                          x: 0,
+                          y: 0,
+                          transition: {
+                            type: "spring",
+                            stiffness: 100,
+                            damping: 20,
+                          },
+                        });
+                      }}
+                    >
+                      {tool}
+                    </motion.p>
+                  ))}
+                </div>
+              </Reveal>
+              <Reveal>
+                <div className=" font-Poppins font-extralight md:text-xl text-[1.1rem] text-[#ebecf3] mt-4">
+                  {item.shortdesc} &nbsp;
+                  <motion.span className="text-violet-400  font-light items-center gap-1 inline-flex cursor-pointer underline group">
+                    Learn more
+                    <PiArrowRightFill className="group-hover:translate-x-1 transition-transform" />
+                  </motion.span>
+                </div>
+              </Reveal>
             </div>
           ))}
         </div>
