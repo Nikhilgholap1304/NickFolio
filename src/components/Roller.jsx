@@ -1,47 +1,106 @@
-import React, { useState, useEffect } from "react";
 import planet from "../assets/about/planet1.png";
-import { motion, useAnimation, useScroll, useTransform, inView } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import {
+  motion,
+  useAnimation,
+  useScroll,
+  useTransform,
+  useInView,
+  useMotionValue,
+} from "framer-motion";
+import { debounce } from "lodash";
+import { useMediaQuery } from "react-responsive";
 
-
-const Roller = () => {
-
-  const [scrollY, setScrollY] = useState(0);
+const Roller = ({ direction, id }) => {
   const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const Max360 = useMediaQuery({
+    query: "(max-width: 361px)",
+  });
+  const Max500 = useMediaQuery({
+    query: "(max-width: 501px) and (min-width: 362px)",
+  });
+  const Max800 = useMediaQuery({
+    query: "(max-width: 801px) and (min-width: 502px)",
+  });
+  const Max1080 = useMediaQuery({
+    query: "(max-width: 1080px) and (min-width: 802px)",
+  });
+
+  const ballPosition = () => {
+    switch (id) {
+      case "1":
+        return "left-[70%]";
+        break;
+
+      case "2":
+        if (Max360) {
+          return "right-[360%]";
+        } 
+        else if (Max500) {
+          return "right-[280%]";
+        } 
+        else if (Max800) {
+          return "right-[200%]";
+        } 
+        else if (Max1080) {
+          return "right-[100%]";
+        } else{
+          return "right-[90%]";
+        }
+        break;
+      default:
+        break;
+    }
+  };
+
+  const scrollY = useMotionValue(0);
+  const x = useTransform(scrollY, (y) =>
+    direction === "right" ? y * 0.2 : -y * 0.2
+  );
+  const rotate = useTransform(scrollY, (y) =>
+    direction === "right" ? y * 0.4 : -y * 0.4
+  );
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      scrollY.set(window.scrollY);
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    const debouncedHandleScroll = debounce(handleScroll, 10);
+
+    if (isInView) {
+      window.addEventListener("scroll", debouncedHandleScroll, {
+        passive: true,
+      });
+    } else {
+      window.removeEventListener("scroll", debouncedHandleScroll);
+    }
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", debouncedHandleScroll);
     };
-  }, []);
+  }, [isInView, scrollY]);
 
   useEffect(() => {
-    const animatePlanet = async () => {
-      await controls.start({
-        x: -scrollY * 0.2, // Adjust multiplier as needed
-        rotate: -scrollY * 0.4,
+    if (isInView) {
+      controls.start({
+        x: x.get(),
+        rotate: rotate.get(),
         transition: { type: "spring", stiffness: 50, damping: 10 },
       });
-    };
-
-    animatePlanet();
-  }, [scrollY, controls]);
+    }
+  }, [isInView, controls, x, rotate]);
 
   return (
-    <motion.div className="relative flex w-full">
+    <motion.div className="relative flex w-full" ref={ref}>
       <span className="w-full bg-violet-50 opacity-50 h-[1px] rounded"></span>
       <motion.span
-        className="absolute invisible left-[70%] lg:left-[70%] bottom-[2px] w-[2rem] h-[2rem] -z-1 rotate-0"
-        initial={{ x: 0 }}
+        className={`absolute 
+        ${ballPosition()} bottom-[2px] w-[2rem] h-[2rem] -z-1 rotate-0`}
+        style={{ x, rotate }}
         animate={controls}
-        whileInView={{
-          visibility: 'visible',
-        }}
       >
         <img src={planet} alt="" className="w-full h-full" />
       </motion.span>

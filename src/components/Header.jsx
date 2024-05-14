@@ -95,7 +95,7 @@ const Header = () => {
               ${
                 item.onlyMobile ? "lg:hidden" : ""
               } px-6 py-4 lg:py-6 md:py-4 md:px-4 lg:-mr-0.25 lg:text-xs lg:font-semibold
-               lg:leading-5 lg:hover:text-n-1 xl:px-8 ${
+               lg:leading-5 transition-colors lg:hover:text-n-1 xl:px-8 ${
                  item.url === pathname.hash
                    ? "z-2 lg:text-n-1 text-color-1"
                    : "lg:text-n-1/50"

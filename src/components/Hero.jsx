@@ -68,7 +68,7 @@ const Hero = () => {
                   initial={{ x: 350, y: -50, rotate: 120 }}
                   animate={{ x: 0, y: 0, rotate: 0 }}
                   transition={{ delay: 2, duration: 2 }}
-                  className="text-color-2 cursor-pointer absolute z-2"
+                  className="text-color-2 cursor-grab absolute z-2"
                 >
                   ,
                 </motion.span>
@@ -88,7 +88,7 @@ const Hero = () => {
                     stiffness: 100,
                     damping: 10,
                   }}
-                  className="text-color-2 cursor-pointer inline-block"
+                  className="text-color-2 cursor-grab inline-block"
                 >
                   .
                 </motion.span>
@@ -128,7 +128,7 @@ const Hero = () => {
                   damping: 10,
                   delay: 1,
                 }}
-                className="absolute z-2 top-[70%] xl:left-[97%] lg:left-[103%] md:left-[104%] sm:left-[104%] bg-orange-300 h-0.5 w-[5rem] cursor-pointer left-[104%] 2xs:left-0 2xs:top-[117%]"
+                className="absolute z-2 top-[70%] xl:left-[97%] lg:left-[103%] md:left-[104%] sm:left-[104%] bg-orange-300 h-0.5 w-[5rem] cursor-grab left-[104%] 2xs:left-0 2xs:top-[117%]"
               ></motion.span>
             </p>
           </div>

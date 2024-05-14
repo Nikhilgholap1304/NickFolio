@@ -54,7 +54,7 @@ const TiltMeCard = () => {
         <motion.img
           src={Me}
           alt="me"
-          className="w-full rounded object-cover inset-0 shadow-lg"
+          className="w-full rounded object-cover inset-0 shadow-lg cursor-grab"
           drag
         dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
         />

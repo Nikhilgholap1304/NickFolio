@@ -17,25 +17,15 @@ const About = () => {
       className="flex flex-col mt-[4rem] lg:mt-[10rem] lg:px-[6rem] md:px-[6rem] sm:px-[1.25rem] xs:px-[1.25rem] 2xs:px-[1.25rem] lg:gap-[3rem] gap-[1rem] relative"
       id="about"
     >
-      {/* <div className="absolute top-[20%] -right-1/2 bg-violet-600 w-[65%] h-1/2 rounded-lg z-0" /> */}
       <div className="flex items-center justify-between gap-4 sm:gap-10">
         <h1 className="font-black font-Poppins text-[3rem] sm:text-[3rem] xs:text-[3rem] 2xs:text-[2rem] lg:text-6xl">
           <Reveal>
             About&nbsp;<span className="text-violet-500">.</span>
           </Reveal>
         </h1>
-        <Roller />
+        <Roller direction="left" id="1" />
       </div>
       <div className="flex flex-col relative lg:items-start items-center justify-center lg:flex-row lg:justify-between">
-        {/* <div className="xl:max-w-[20rem] h-[auto] rounded overflow-hidden lg:max-w-[15rem] lg:mb-auto mb-9 relative sm: max-w-[20rem] xs:w-[15rem]">
-          <Reveal>
-            <img
-              src={Me}
-              alt="me"
-              className="w-full rounded object-cover inset-0"
-            />
-          </Reveal>
-        </div> */}
         <TiltMeCard />
         <div className="relative lg:max-w-[60%]">
           <Reveal>
@@ -45,23 +35,34 @@ const About = () => {
             first-letter:text-[1.3rem]
           first-letter:float-left first-letter:bg-[#232323] first-letter:font-bold first-letter:mr-2"
             >
-              Hey! I'm Nikhil N Gholap, if you haven't gathered that by now.
-              I'm an aspiring full-stack developer cuz just freshly pulled completed my BSc.IT degree. well, I'm probably specialized in react, sort of you can say has enough skill regarding 'MERN' stack.
+              Hey! I'm Nikhil N Gholap, if you haven't gathered that by now. I'm
+              an aspiring full-stack developer cuz just freshly pulled completed
+              my BSc.IT degree. well, I'm probably specialized in react, sort of
+              you can say has enough skill regarding 'MERN' stack.
             </p>
           </Reveal>
           <Reveal>
             <p className="mb-6 font-Poppins font-extralight  lg:text-lg text-base text-[#ebecf3]">
-              So I'm suppose to reveal some of my skills thereby you could scrutinize my value over assumptions, then behold - React, Node js, Express js, MongoDB, Rest API's, SCSS, Tailwind, MUI, Primereact, Bootstrap, Framer motion, FireBase (in learning progress),etc. Besides I typically learn from mistakes i.e gaining experience is all the way matters.
+              So I'm suppose to reveal some of my skills thereby you could
+              scrutinize my value over assumptions, then behold - React, Node
+              js, Express js, MongoDB, Rest API's, SCSS, Tailwind, MUI,
+              Primereact, Bootstrap, Framer motion, FireBase (in learning
+              progress),etc. Besides I typically learn from mistakes i.e gaining
+              experience is all the way matters.
             </p>
           </Reveal>
           <Reveal>
             <p className="mb-6 font-Poppins font-extralight lg:text-lg text-base text-[#ebecf3]">
-              Outside of work, guess there are bunch of aspects I would love to do - instances such as dancing, singing, swimming (suspecting huh ? they seem pretty much basic yet I really love to carry out).
+              Outside of work, guess there are bunch of aspects I would love to
+              do - instances such as dancing, singing, swimming (suspecting huh
+              ? they seem pretty much basic yet I really love to carry out).
             </p>
           </Reveal>
           <Reveal>
             <p className="mb-6 font-Poppins font-extralight lg:text-lg text-base text-[#ebecf3]">
-              So, I'm passively looking for new position where I could desirably fit seemlessly, If you think an opening might have the chance for the same, lets connect 🔗
+              So, I'm passively looking for new position where I could desirably
+              fit seemlessly, If you think an opening might have the chance for
+              the same, lets connect 🔗
             </p>
           </Reveal>
           <div className="flex gap-5 flex-nowrap items-center">
