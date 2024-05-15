@@ -56,13 +56,13 @@ const TiltMeCard = () => {
           alt="me"
           className="w-full rounded object-cover inset-0 shadow-lg"
           drag
-        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+          dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
           initial={{
             cursor: "grab",
           }}
-        whileTap={{
+          whileTap={{
             cursor: "grabbing",
-        }}
+          }}
         />
       </Reveal>
       <ScrollParallax isAbsolutelyPositioned zIndex={-1}>
