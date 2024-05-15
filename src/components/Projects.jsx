@@ -112,6 +112,15 @@ const Projects = () => {
                           damping: 20,
                         },
                       }}
+                      whileTap={{
+                        x: Math.random() * 50 - 25,
+                        y: Math.random() * 50 - 25,
+                        transition: {
+                          type: "spring",
+                          stiffness: 200,
+                          damping: 20,
+                        },
+                      }}
                       onMouseLeave={() => {
                         controls.start({
                           x: 0,
@@ -132,7 +141,7 @@ const Projects = () => {
               <Reveal>
                 <div className=" font-Poppins font-extralight md:text-xl text-[1.1rem] text-[#ebecf3] mt-4">
                   {item.shortdesc} &nbsp;
-                  <motion.span className="text-violet-400  font-light items-center gap-1 inline-flex cursor-pointer underline group">
+                  <motion.span className="text-violet-400  font-light items-center gap-1 inline-flex cursor-pointer underline group" onClick={() => handleModal(item)}>
                     Learn more
                     <PiArrowRightFill className="group-hover:translate-x-1 transition-transform" />
                   </motion.span>
