@@ -39,7 +39,7 @@ const Roller = ({ direction, id }) => {
           return "right-[360%]";
         } 
         else if (Max500) {
-          return "right-[280%]";
+          return "right-[320%]";
         } 
         else if (Max800) {
           return "right-[200%]";

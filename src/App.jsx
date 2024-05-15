@@ -12,9 +12,9 @@ import { useState, useEffect, useRef } from "react";
 function App() {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
-  const [activeSectionId, setActiveSectionId] = useState(null);
+  const [activeSectionId, setActiveSectionId] = useState(0);
 
-  const isAboutInView = useInView(aboutRef, { threshold: 0.5 });
+  const isAboutInView = useInView(aboutRef, { threshold: -0.9 });
   const isProjectsInView = useInView(projectsRef, { threshold: 0.5 });
 
   useEffect(() => {
@@ -22,13 +22,16 @@ function App() {
       setActiveSectionId(1);
     } else if (isProjectsInView) {
       setActiveSectionId(2);
+    } else {
+      setActiveSectionId(0);
+      console.log("null")
     }
-  }, [isAboutInView, isProjectsInView]);
+  }, [isAboutInView, isProjectsInView, activeSectionId]);
 
   return (
     <>
       <div className=" relative w-screen h-screen ">
-        <Header />
+        <Header activeSectionId={activeSectionId} />
         <Hero />
         <div ref={aboutRef}>
           <About />

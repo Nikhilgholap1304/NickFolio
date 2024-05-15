@@ -12,7 +12,7 @@ import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Reveal from "./Reveal";
 
-const Header = () => {
+const Header = ({activeSectionId}) => {
   const pathname = useLocation();
   const [openNavigation, setOpenNavigation] = useState(false);
   const { ref, inView } = useInView({ threshold: 0.5 });
@@ -46,6 +46,7 @@ const Header = () => {
     }, 300);
     enablePageScroll();
   };
+  console.log(activeSectionId)
   return (
     <>
       <header
@@ -96,7 +97,7 @@ const Header = () => {
                 item.onlyMobile ? "lg:hidden" : ""
               } px-6 py-4 lg:py-6 md:py-4 md:px-4 lg:-mr-0.25 lg:text-xs lg:font-semibold
                lg:leading-5 transition-colors lg:hover:text-n-1 xl:px-8 ${
-                 item.url === pathname.hash
+                 item.id == activeSectionId 
                    ? "z-2 lg:text-n-1 text-color-1"
                    : "lg:text-n-1/50"
                } lg:leading-5 lg:hover:text-n-1`}

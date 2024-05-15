@@ -5,38 +5,38 @@ import yoghurtz from "../assets/projects/yoghurtz.png";
 
 export const navigation = [
   {
-    id: "0",
+    id: "1",
     title: "About",
     url: "#about",
   },
   {
-    id: "1",
+    id: "2",
     title: "Projects",
     url: "#projects",
   },
   {
-    id: "2",
+    id: "3",
     title: "Skills",
     url: "#skills",
   },
   {
-    id: "3",
+    id: "4",
     title: "Testimonials",
     url: "#testimonials",
   },
   {
-    id: "4",
+    id: "5",
     title: "Contact",
     url: "#contact",
   },
   {
-    id: "5",
+    id: "6",
     title: "New account",
     url: "#signup",
     onlyMobile: true,
   },
   {
-    id: "6",
+    id: "7",
     title: "Sign in",
     url: "#login",
     onlyMobile: true,
