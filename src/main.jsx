@@ -17,7 +17,7 @@ const AppWithRouter = () => {
 
   return (
     <Router>
-      {/* <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait">
         {isLoading ? (
           <motion.div
             key="loader"
@@ -28,12 +28,12 @@ const AppWithRouter = () => {
           >
             <Loader />
           </motion.div>
-        ) : ( */}
+        ) : (
           <Routes>
             <Route path="/" index exact element={<App />} />
           </Routes>
-        {/* )}
-      </AnimatePresence> */}
+        )}
+      </AnimatePresence>
     </Router>
   );
 };

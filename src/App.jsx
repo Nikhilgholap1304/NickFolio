@@ -9,6 +9,8 @@ import AnimatedCursorComponent from "./components/AnimatedCursor";
 import { useInView } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import CircularProgress from "./components/CircularProgress";
 
 function App() {
   const aboutRef = useRef(null);
@@ -48,6 +50,8 @@ function App() {
         <div ref={contactRef}>
           <Contact />
         </div>
+        <CircularProgress/>
+        <Footer/>
       </div>
 
       <div className="fixed inset-0 z-0 pointer-events-none select-none cursor-none">

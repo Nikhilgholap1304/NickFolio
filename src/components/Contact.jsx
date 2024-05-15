@@ -18,7 +18,7 @@ const Contact = () => {
             </Reveal>
           </h4>
           <Reveal>
-            <p className="my-6 font-extralight text-center text-xl">
+            <p className="my-6 font-extralight text-center text-xl 2xs:text-base">
               Feel free to shoot me an email if you're not enough busy and thus
               want to connect! You can also find me on{" "}
               <a
