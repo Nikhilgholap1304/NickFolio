@@ -8,23 +8,29 @@ import { Canvas } from "@react-three/fiber";
 import AnimatedCursorComponent from "./components/AnimatedCursor";
 import { useInView } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
+import Contact from "./components/Contact";
 
 function App() {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
   const [activeSectionId, setActiveSectionId] = useState(0);
 
   const isAboutInView = useInView(aboutRef, { threshold: -0.9 });
   const isProjectsInView = useInView(projectsRef, { threshold: 0.5 });
+  const isContactInView = useInView(contactRef, { threshold: 0.5 });
 
   useEffect(() => {
     if (isAboutInView) {
       setActiveSectionId(1);
     } else if (isProjectsInView) {
       setActiveSectionId(2);
+    } else if (isContactInView) {
+      setActiveSectionId(5);
     } else {
       setActiveSectionId(0);
-      console.log("null")
+      console.log("null");
     }
   }, [isAboutInView, isProjectsInView, activeSectionId]);
 
@@ -38,6 +44,9 @@ function App() {
         </div>
         <div ref={projectsRef}>
           <Projects />
+        </div>
+        <div ref={contactRef}>
+          <Contact />
         </div>
       </div>
 
