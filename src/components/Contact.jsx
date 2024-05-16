@@ -3,12 +3,15 @@ import Section from "./Section";
 import { motion, useAnimation } from "framer-motion";
 import { MdOutlineAttachEmail } from "react-icons/md";
 import Reveal from "./Reveal";
-import './style/style.scss'
+import "./style/style.scss";
+import small4 from "../assets/contact/4-small.png";
+import grid from "../assets/contact/grid.png";
+import { ScrollParallax } from "react-just-parallax";
 
 const Contact = () => {
   return (
     <>
-      <Section
+      <section
         className="flex flex-col mt-[4rem] lg:mt-[10rem] lg:px-[6rem] md:px-[6rem] sm:px-[1.25rem] xs:px-[1.25rem] 2xs:px-[1.25rem] lg:gap-[3rem] gap-[1rem] relative h-screen"
         id="contact"
       >
@@ -53,7 +56,22 @@ const Contact = () => {
             </a>
           </Reveal>
         </div>
-      </Section>
+        <div className="absolute top-0 left-0 right-0 bottom-0 w-screen h-screen overflow-hidden -z-1 opacity-100 bg-no-repeat bg-center">
+          <ScrollParallax>
+            <img src={grid} alt="" className="w-full h-full"/>
+          </ScrollParallax>
+        </div>
+        <div className="absolute top-[70%] 2xs:top-[80%] xs:2xs:top-[80%] left-[20%] -z-1 opacity-100 bg-no-repeat bg-center w-15">
+          {/* <ScrollParallax> */}
+            <img src={small4} alt="" className="w-full h-full"/>
+          {/* </ScrollParallax> */}
+        </div>
+        <div className="absolute top-[50%] 2xs:top-[20%] right-[10%] -z-1 opacity-100 bg-no-repeat bg-center w-5">
+          {/* <ScrollParallax> */}
+            <img src={small4} alt="" className="w-full h-full"/>
+          {/* </ScrollParallax> */}
+        </div>
+      </section>
     </>
   );
 };
