@@ -30,7 +30,7 @@ const ProgressBar = ({ progress }) => {
           cy={radius}
         />
         <circle
-          stroke="#ad57ff"
+          stroke="rgb(130 92 255)"
           fill="transparent"
           strokeWidth={stroke}
           strokeDasharray={circumference + " " + circumference}

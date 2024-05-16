@@ -3,6 +3,7 @@ import Section from "./Section";
 import { motion, useAnimation } from "framer-motion";
 import { MdOutlineAttachEmail } from "react-icons/md";
 import Reveal from "./Reveal";
+import './style/style.scss'
 
 const Contact = () => {
   return (
@@ -12,9 +13,14 @@ const Contact = () => {
         id="contact"
       >
         <div className="font-Poppins max-w-[55rem] m-auto">
-          <h4 className="md:text-8xl text-center font-black text-5xl">
+          <h4 className="md:text-8xl text-center text-5xl">
             <Reveal>
-              Contact<span className="text-violet-500">.</span>
+              {"Contact".split("").map((child, i) => (
+                <span className="BubbleHover" key={i}>
+                  {child}
+                </span>
+              ))}
+              <span className="font-bold text-violet-500">.</span>
             </Reveal>
           </h4>
           <Reveal>

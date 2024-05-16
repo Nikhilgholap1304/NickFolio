@@ -1,0 +1,52 @@
+.BubbleHover {
+  transition:
+    0.35s font-weight,
+    0.35s color;
+}
+.BubbleHover:hover {
+  color: rgb(82, 29, 255);
+  font-weight: 900;
+}
+.BubbleHover:hover + .BubbleHover {
+  font-weight: 700;
+  color: rgb(114, 72, 255);
+}
+
+.BubbleHover:hover + .BubbleHover + .BubbleHover {
+  font-weight: 600;
+  color: rgb(166, 139, 255);
+}
+.BubbleHover:has(+ .BubbleHover:hover) {
+  font-weight: 700;
+  color: rgb(114, 72, 255);
+}
+.BubbleHover:has(+ .BubbleHover + .BubbleHover:hover) {
+  font-weight: 600;
+  color: rgb(166, 139, 255);
+}
+// .BubbleHover {
+//   transition:
+//     0.35s font-weight,
+//     0.35s color;
+// }
+// .BubbleHover:hover {
+//   color: rgb(184, 200, 255);
+//   font-weight: 900;
+// }
+// .BubbleHover:hover + .BubbleHover {
+//   font-weight: 700;
+//   color: rgb(160, 179, 255);
+// }
+
+// .BubbleHover:hover + .BubbleHover + .BubbleHover {
+//   font-family: 600;
+//   color: rgb(121, 147, 255);
+// }
+// .BubbleHover:has(+ .BubbleHover:hover) {
+//   font-weight: 700;
+//   color: rgb(160, 179, 255);
+// }
+// .BubbleHover:has(+ .BubbleHover + .BubbleHover:hover) {
+//   font-weight: 600;
+//   color: rgb(121, 147, 255);
+// }

@@ -15,6 +15,7 @@ const AnimatedCursorComponent = () => {
         outerStyle={{
           border: "3px solid #e9ceff",
         }}
+        trailingSpeed={3}
       />
     </>
   );
