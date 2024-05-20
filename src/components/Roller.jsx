@@ -37,19 +37,31 @@ const Roller = ({ direction, id }) => {
       case "2":
         if (Max360) {
           return "right-[280%]";
-        } 
-        else if (Max500) {
+        } else if (Max500) {
           return "right-[240%]";
-        } 
-        else if (Max800) {
+        } else if (Max800) {
           return "right-[200%]";
-        } 
-        else if (Max1080) {
+        } else if (Max1080) {
           return "right-[100%]";
-        } else{
+        } else {
           return "right-[90%]";
         }
         break;
+
+      case "3":
+        if (Max360) {
+          return "left-[600%]";
+        } else if (Max500) {
+          return "left-[520%]";
+        } else if (Max800) {
+          return "left-[300%]";
+        } else if (Max1080) {
+          return "left-[280%]";
+        } else {
+          return "left-[120%]";
+        }
+        break;
+
       default:
         break;
     }

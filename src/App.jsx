@@ -11,16 +11,19 @@ import { useState, useEffect, useRef } from "react";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import CircularProgress from "./components/CircularProgress";
+import Skills from "./components/Skills";
 
 function App() {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
+  const skillsRef = useRef(null);
   const contactRef = useRef(null);
 
   const [activeSectionId, setActiveSectionId] = useState(0);
 
   const isAboutInView = useInView(aboutRef, { threshold: -0.9 });
   const isProjectsInView = useInView(projectsRef, { threshold: 0.5 });
+  const isSkillsInView = useInView(skillsRef, { threshold: 0.5 });
   const isContactInView = useInView(contactRef, { threshold: 0.5 });
 
   useEffect(() => {
@@ -28,13 +31,15 @@ function App() {
       setActiveSectionId(1);
     } else if (isProjectsInView) {
       setActiveSectionId(2);
+    } else if (isSkillsInView) {
+      setActiveSectionId(3);
     } else if (isContactInView) {
       setActiveSectionId(5);
     } else {
       setActiveSectionId(0);
       console.log("null");
     }
-  }, [isAboutInView, isProjectsInView, activeSectionId]);
+  }, [isAboutInView, isProjectsInView, isSkillsInView, activeSectionId]);
 
   return (
     <>
@@ -47,11 +52,14 @@ function App() {
         <div ref={projectsRef}>
           <Projects />
         </div>
+        <div ref={skillsRef}>
+          <Skills />
+        </div>
         <div ref={contactRef}>
           <Contact />
         </div>
-        <CircularProgress/>
-        <Footer/>
+        <CircularProgress />
+        <Footer />
       </div>
 
       <div className="fixed inset-0 z-0 pointer-events-none select-none cursor-none">
