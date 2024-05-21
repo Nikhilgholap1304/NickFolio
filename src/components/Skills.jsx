@@ -24,9 +24,9 @@ const Skills = () => {
      z-1 left-1/2 flex w-auto h-auto aspect-square border border-n-6 rounded-full -translate-x-1/2 md:scale-100"
       >
         <div className="relative flex w-[60%] h-auto aspect-square m-auto border border-n-6 rounded-full">
-          <div className="w-[12rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
+          <div className="xl:w-[12rem] lg:w-[8rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
             <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
-              <img src={Nickfolio} alt="nickfolio" className="w-20 h-20 inset-0" />
+              <img src={Nickfolio} alt="nickfolio" className="xl:w-20 lg:w-14 xl:h-20 lg:h-14 md:w-10 md:h-10 inset-0" />
             </div>
           </div>
           <ul>
@@ -36,12 +36,12 @@ const Skills = () => {
                 className={`absolute top-0 left-1/2 h-1/2 -ml-[2.2rem] origin-bottom rotate-${(index + 12) * 45}`}
               >
                 <div
-                  className={`relative -top-[2.2rem] flex w-[4.5rem] h-[4.5rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${(index + 12) * 45}`}
+                  className={`relative -top-[2.2rem] flex xl:w-[4.5rem] lg:w-[4rem] xl:h-[4.5rem] lg:h-[4rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${(index + 12) * 45}`}
                 >
                   <img
                     src={skill.icon}
                     alt={skill.title}
-                    className="m-auto w-[3.1rem] h-[3.1rem]"
+                    className="m-auto xl:w-[3.1rem] lg:w-[2.7rem] lg:h-[2.7rem] xl:h-[3.1rem]"
                   />
                 </div>
               </li>
@@ -57,12 +57,12 @@ const Skills = () => {
               }`}
             >
               <div
-                className={`relative -top-[2.2rem] flex w-[4.5rem] h-[4.5rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
+                className={`relative -top-[2.2rem] flex xl:w-[4.5rem] lg:w-[4rem] xl:h-[4.5rem] lg:h-[4rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
                   index * 30
                 }`}
               >
                 <img
-                  className="m-auto w-[3.1rem] h-[3.1rem]"
+                  className="m-auto xl:w-[3.1rem] lg:w-[2.7rem] lg:h-[2.7rem] xl:h-[3.1rem]"
                   src={skill.icon}
                   alt={skill.title}
                 />
