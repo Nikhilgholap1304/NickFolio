@@ -3,6 +3,7 @@ import Section from "./Section";
 import Reveal from "./Reveal";
 import Roller from "./Roller";
 import Nickfolio from "../assets/Nickfolio_icon_colored.png";
+import { skillSet } from "../constants/index";
 
 const Skills = () => {
   return (

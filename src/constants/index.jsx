@@ -3,26 +3,26 @@ import weatherly from "../assets/projects/weatherly.png";
 import animiz from "../assets/projects/animiz.png";
 import yoghurtz from "../assets/projects/yoghurtz.png";
 
-import Bootstrap from "../assets/skills/Bootstrap.png"
-import CSS from "../assets/skills/CSS.png"
-import Expressjs from "../assets/skills/Expressjs.png"
-import Firebase from "../assets/skills/Firebase.png"
-import Git from "../assets/skills/Git.png"
-import Html from "../assets/skills/Html.png"
-import JS from "../assets/skills/JS.png"
-import MongoDB from "../assets/skills/MongoDB.png"
-import Mongoose from "../assets/skills/Mongoose.png"
-import MUI from "../assets/skills/MUI.png"
-import Netlify from "../assets/skills/Netlify.png"
-import NodeJs from "../assets/skills/NodeJs.png"
-import Php from "../assets/skills/Php.png"
-import Primereact from "../assets/skills/Primereact.png"
-import React from "../assets/skills/React.png"
-import SCSS from "../assets/skills/SCSS.png"
-import SQL from "../assets/skills/SQL.png"
-import Tailwind from "../assets/skills/Tailwind.png"
-import Vercel from "../assets/skills/Vercel.png"
-import Vitejs from "../assets/skills/Vitejs.png"
+import Bootstrap from "../assets/skills/Bootstrap.png";
+import CSS from "../assets/skills/CSS.png";
+import Expressjs from "../assets/skills/Expressjs.png";
+import Firebase from "../assets/skills/Firebase.png";
+import Git from "../assets/skills/Git.png";
+import Html from "../assets/skills/Html.png";
+import JS from "../assets/skills/JS.png";
+import MongoDB from "../assets/skills/MongoDB.png";
+import Mongoose from "../assets/skills/Mongoose.png";
+import MUI from "../assets/skills/MUI.png";
+import Netlify from "../assets/skills/Netlify.png";
+import NodeJs from "../assets/skills/NodeJs.png";
+import Php from "../assets/skills/Php.png";
+import Primereact from "../assets/skills/Primereact.png";
+import React from "../assets/skills/React.png";
+import SCSS from "../assets/skills/SCSS.png";
+import SQL from "../assets/skills/SQL.png";
+import Tailwind from "../assets/skills/Tailwind.png";
+import Vercel from "../assets/skills/Vercel.png";
+import Vitejs from "../assets/skills/Vitejs.png";
 
 export const navigation = [
   {
@@ -130,5 +130,155 @@ export const projects = [
       "This project is a sleek and modern website dedicated to anime content, featuring a highly responsive design with dark/light mode switch and a working feedback form.",
     fulldesc:
       "This project is a sleek and modern website dedicated to anime content, featuring a highly responsive design with dark/light mode switch and a working feedback form. This website offers anime enthusiasts a visually appealing and user-friendly platform to explore their favorite anime series, movies, characters, and more. With its responsive design and dark/light mode switch, users can enjoy an optimized viewing experience across various devices and preferences.",
+  },
+];
+
+export const skillSet = [
+  {
+    id: "0",
+    title: "React",
+    icon: React,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "1",
+    title: "Bootstrap",
+    icon: Bootstrap,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "2",
+    title: "CSS",
+    icon: CSS,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "3",
+    title: "Expressjs",
+    icon: Expressjs,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "4",
+    title: "Firebase",
+    icon: Firebase,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "5",
+    title: "Git",
+    icon: Git,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "6",
+    title: "Html",
+    icon: Html,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "7",
+    title: "JS",
+    icon: JS,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "8",
+    title: "MongoDB",
+    icon: MongoDB,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "9",
+    title: "Mongoose",
+    icon: Mongoose,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "10",
+    title: "MUI",
+    icon: MUI,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "11",
+    title: "Netlify",
+    icon: Netlify,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "12",
+    title: "NodeJs",
+    icon: NodeJs,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "13",
+    title: "Php",
+    icon: Php,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "14",
+    title: "Primereact",
+    icon: Primereact,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "15",
+    title: "React",
+    icon: React,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "16",
+    title: "SCSS",
+    icon: SCSS,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "17",
+    title: "SQL",
+    icon: SQL,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "18",
+    title: "Tailwind",
+    icon: Tailwind,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "19",
+    title: "Vercel",
+    icon: Vercel,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "20",
+    title: "Vitejs",
+    icon: Vitejs,
+    width: 34,
+    height: 34,
   },
 ];
