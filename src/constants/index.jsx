@@ -3,6 +3,27 @@ import weatherly from "../assets/projects/weatherly.png";
 import animiz from "../assets/projects/animiz.png";
 import yoghurtz from "../assets/projects/yoghurtz.png";
 
+import Bootstrap from "../assets/skills/Bootstrap.png"
+import CSS from "../assets/skills/CSS.png"
+import Expressjs from "../assets/skills/Expressjs.png"
+import Firebase from "../assets/skills/Firebase.png"
+import Git from "../assets/skills/Git.png"
+import Html from "../assets/skills/Html.png"
+import JS from "../assets/skills/JS.png"
+import MongoDB from "../assets/skills/MongoDB.png"
+import Mongoose from "../assets/skills/Mongoose.png"
+import MUI from "../assets/skills/MUI.png"
+import Netlify from "../assets/skills/Netlify.png"
+import NodeJs from "../assets/skills/NodeJs.png"
+import Php from "../assets/skills/Php.png"
+import Primereact from "../assets/skills/Primereact.png"
+import React from "../assets/skills/React.png"
+import SCSS from "../assets/skills/SCSS.png"
+import SQL from "../assets/skills/SQL.png"
+import Tailwind from "../assets/skills/Tailwind.png"
+import Vercel from "../assets/skills/Vercel.png"
+import Vitejs from "../assets/skills/Vitejs.png"
+
 export const navigation = [
   {
     id: "1",
