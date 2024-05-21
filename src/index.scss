@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Concert+One&family=Lilita+One&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Concert+One&family=Lilita+One&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,11 +14,162 @@
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
-    &::selection{
+    &::selection {
         background: rgb(139 92 246);
         color: black;
     }
 }
-body{
+body {
     overflow-x: hidden;
 }
+@layer base {
+    body {
+        @apply font-sans bg-n-8 text-n-1 text-base;
+    }
+}
+
+.rotate-30 {
+    @apply rotate-[30deg];
+}
+
+.rotate-60 {
+    @apply rotate-[60deg];
+}
+
+.rotate-90 {
+    @apply rotate-[90deg];
+}
+
+.rotate-120 {
+    @apply rotate-[120deg];
+}
+
+.rotate-150 {
+    @apply rotate-[150deg];
+}
+
+.rotate-180 {
+    @apply rotate-[180deg];
+}
+
+.rotate-210 {
+    @apply rotate-[210deg];
+}
+
+.rotate-240 {
+    @apply rotate-[240deg];
+}
+
+.rotate-270 {
+    @apply rotate-[270deg];
+}
+
+.rotate-300 {
+    @apply rotate-[300deg];
+}
+
+.rotate-330 {
+    @apply rotate-[330deg];
+}
+
+.rotate-360 {
+    @apply rotate-[360deg];
+}
+.rotate-540 {
+    @apply rotate-[540deg];
+}
+.rotate-585 {
+    @apply rotate-[585deg];
+}
+.rotate-630 {
+    @apply rotate-[630deg];
+}
+.rotate-675 {
+    @apply rotate-[675deg];
+}
+.rotate-720 {
+    @apply rotate-[720deg];
+}
+.rotate-765 {
+    @apply rotate-[765deg];
+}
+.rotate-810 {
+    @apply rotate-[810deg];
+}
+.rotate-855 {
+    @apply rotate-[855deg];
+}
+
+.-rotate-30 {
+    @apply rotate-[-30deg];
+}
+
+.-rotate-60 {
+    @apply rotate-[-60deg];
+}
+
+.-rotate-90 {
+    @apply rotate-[-90deg];
+}
+
+.-rotate-120 {
+    @apply rotate-[-120deg];
+}
+
+.-rotate-150 {
+    @apply rotate-[-150deg];
+}
+
+.-rotate-180 {
+    @apply rotate-[-180deg];
+}
+
+.-rotate-210 {
+    @apply rotate-[-210deg];
+}
+
+.-rotate-240 {
+    @apply rotate-[-240deg];
+}
+
+.-rotate-270 {
+    @apply rotate-[-270deg];
+}
+
+.-rotate-300 {
+    @apply rotate-[-300deg];
+}
+
+.-rotate-330 {
+    @apply rotate-[-330deg];
+}
+
+.-rotate-360 {
+    @apply rotate-[-360deg];
+}
+
+.-rotate-540 {
+    @apply -rotate-[540deg];
+}
+.-rotate-585 {
+    @apply -rotate-[585deg];
+}
+.-rotate-630 {
+    @apply -rotate-[630deg];
+}
+.-rotate-675 {
+    @apply -rotate-[675deg];
+}
+.-rotate-720 {
+    @apply -rotate-[720deg];
+}
+.-rotate-765 {
+    @apply -rotate-[765deg];
+}
+.-rotate-810 {
+    @apply -rotate-[810deg];
+}
+.-rotate-855 {
+    @apply -rotate-[855deg];
+}
+
