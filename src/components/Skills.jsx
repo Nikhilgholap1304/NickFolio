@@ -5,8 +5,25 @@ import Roller from "./Roller";
 import Nickfolio from "../assets/Nickfolio_icon_colored.png";
 import { skillSet } from "../constants/index";
 import brackets from "../assets/svg/Brackets";
+import { motion } from "framer-motion";
 
 const Skills = () => {
+  // Define animation variants
+  const gradientVariants = {
+    initial: {
+      opacity: 0,
+      scale: 0,
+    },
+    animate: {
+      opacity: [1, 0, 1], 
+      scale: [1,0.4,1],
+      transition: {
+        duration: 20, 
+        repeat: Infinity, 
+        ease: "easeInOut", 
+      },
+    },
+  };
   return (
     <Section
       className="flex flex-col mt-[4rem] lg:mt-[10rem] lg:px-[6rem] md:px-[6rem] sm:px-[2.25rem] xs:px-[2.25rem] 2xs:px-[2rem] lg:gap-[5rem] gap-[5rem] relative overflow-hidden"
@@ -24,7 +41,7 @@ const Skills = () => {
         className="relative 
      z-1 left-1/2 flex w-auto h-auto aspect-square border border-n-6 rounded-full -translate-x-1/2 md:scale-100"
       >
-        <div className="relative flex w-[60%] h-auto aspect-square m-auto border border-n-6 rounded-full">
+        <div className="relative flex w-[60%] h-auto aspect-square m-auto border border-n-5 rounded-full">
           <div className="xl:w-[12rem] lg:w-[8rem] md:w-[6rem] sm:w-[5rem] xs:w-[4rem] 2xs:w-[3rem] aspect-square m-auto sm:p-[0.2rem] p-[0.1rem] bg-conic-gradient rounded-full">
             <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
               <img
@@ -84,12 +101,22 @@ const Skills = () => {
         {/* <h1 className="lg:text-2xl xl:text-4xl md:font-bold font-code uppercase opacity-10 md:text-xl text-3xl 2xs:text-lg 2xs:-mt-6">
           The skill set system
         </h1> */}
-        <div className={`tagline flex items-center`}>
+        <div className={`tagline flex items-center text-xl 2xs:text-xs`}>
           {brackets("left")}
-          <div className="mx-3 text-n-3">The skill set system</div>
+          <div className="mx-3 text-n-3 opacity-70">My skill set system</div>
           {brackets("right")}
         </div>
       </div>
+      <motion.div
+        className="absolute -z-1 w-full h-full m-auto left-[0%] aspect-square"
+        style={{
+          background:
+            "radial-gradient(100% 100% at 50% 50%, rgb(48 7 125), rgb(9 9 9 / 0%) 50%)",
+        }}
+        initial="initial"
+        animate="animate"
+        variants={gradientVariants}
+      ></motion.div>
     </Section>
   );
 };

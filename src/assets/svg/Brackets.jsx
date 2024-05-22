@@ -1,8 +1,8 @@
 const brackets = (position) =>
   position === "left" ? (
     <svg
-      width="5"
-      height="14"
+      width="10"
+      height="30"
       viewBox="0 0 5 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -17,8 +17,8 @@ const brackets = (position) =>
     </svg>
   ) : (
     <svg
-      width="5"
-      height="14"
+      width="10"
+      height="30"
       viewBox="0 0 5 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
