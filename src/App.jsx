@@ -2,22 +2,24 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import Testimonials from "./components/Testimonials";
 import ButtonGradient from "./assets/svg/ButtonGradient";
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import AnimatedCursorComponent from "./components/AnimatedCursor";
 import { useInView } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import CircularProgress from "./components/CircularProgress";
-import Skills from "./components/Skills";
 
 function App() {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const skillsRef = useRef(null);
   const contactRef = useRef(null);
+  const TestimonialsRef = useRef(null);
 
   const [activeSectionId, setActiveSectionId] = useState(0);
 
@@ -25,6 +27,7 @@ function App() {
   const isProjectsInView = useInView(projectsRef, { threshold: 0.5 });
   const isSkillsInView = useInView(skillsRef, { threshold: 0.5 });
   const isContactInView = useInView(contactRef, { threshold: 0.5 });
+  const isTestimonialsInView = useInView(TestimonialsRef, { threshold: 0.5 });
 
   useEffect(() => {
     if (isAboutInView) {
@@ -33,6 +36,8 @@ function App() {
       setActiveSectionId(2);
     } else if (isSkillsInView) {
       setActiveSectionId(3);
+    } else if (isTestimonialsInView) {
+      setActiveSectionId(4);
     } else if (isContactInView) {
       setActiveSectionId(5);
     } else {
@@ -54,6 +59,9 @@ function App() {
         </div>
         <div ref={skillsRef}>
           <Skills />
+        </div>
+        <div ref={contactRef}>
+          <Contact />
         </div>
         <div ref={contactRef}>
           <Contact />
