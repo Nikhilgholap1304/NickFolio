@@ -26,8 +26,8 @@ function App() {
   const isAboutInView = useInView(aboutRef, { threshold: -0.9 });
   const isProjectsInView = useInView(projectsRef, { threshold: 0.5 });
   const isSkillsInView = useInView(skillsRef, { threshold: 0.5 });
-  const isContactInView = useInView(contactRef, { threshold: 0.5 });
   const isTestimonialsInView = useInView(testimonialsRef, { threshold: 0.5 });
+  const isContactInView = useInView(contactRef, { threshold: 0.5 });
 
   useEffect(() => {
     if (isAboutInView) {
