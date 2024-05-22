@@ -62,6 +62,14 @@ const Roller = ({ direction, id }) => {
         }
         break;
 
+      case "4":
+        if(Max360){
+          return "right-[3000%]";
+        } else {
+          return "right-[200%]"
+        }
+        break;
+
       default:
         break;
     }
