@@ -15,12 +15,12 @@ const Skills = () => {
       scale: 0,
     },
     animate: {
-      opacity: [1, 0, 1], 
-      scale: [1,0.4,1],
+      opacity: [1, 0, 1],
+      scale: [1, 0.4, 1],
       transition: {
-        duration: 20, 
-        repeat: Infinity, 
-        ease: "easeInOut", 
+        duration: 20,
+        repeat: Infinity,
+        ease: "easeInOut",
       },
     },
   };
@@ -53,24 +53,55 @@ const Skills = () => {
           </div>
           <ul>
             {skillSet.slice(12).map((skill, index) => (
-              <li
+              <motion.li
                 key={skill.id}
                 className={`absolute top-0 left-1/2 h-1/2 lg:-ml-[2.2rem] sm:-ml-[1.5rem] xs:-ml-[1.27rem] 2xs:-ml-[1.1rem] origin-bottom rotate-${
                   (index + 12) * 45
                 }`}
               >
-                <div
-                  className={`relative lg:-top-[2.2rem] sm:-top-[1.5rem] xs:-top-[1.2rem] 2xs:-top-[1.05rem] flex xl:w-[4.5rem] lg:w-[4rem] xl:h-[4.5rem] lg:h-[4rem] md:w-[3.5rem] md:h-[3.5rem] sm:h-[3rem] sm:w-[3rem] xs:size-[2.5rem] 2xs:size-[2.3rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
-                    (index + 12) * 45
-                  }`}
-                >
-                  <img
-                    src={skill.icon}
-                    alt={skill.title}
-                    className="m-auto xl:w-[3.1rem] lg:w-[2.7rem] lg:h-[2.7rem] xl:h-[3.1rem] md:h-[2.4rem] md:w-[2.4rem] sm:h-[1.9rem] sm:w-[1.9rem] xs:size-[1.5rem] 2xs:size-[1.2rem]"
-                  />
-                </div>
-              </li>
+                <Reveal>
+                  <motion.div
+                    className={`relative lg:-top-[2.2rem] sm:-top-[1.5rem] xs:-top-[1.2rem] 2xs:-top-[1.05rem] flex xl:w-[4.5rem] lg:w-[4rem] xl:h-[4.5rem] lg:h-[4rem] md:w-[3.5rem] md:h-[3.5rem] sm:h-[3rem] sm:w-[3rem] xs:size-[2.5rem] 2xs:size-[2.3rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
+                      (index + 12) * 45
+                    }`}
+                    whileHover={{
+                      x: Math.random() * 50 - 25,
+                      y: Math.random() * 50 - 25,
+                      transition: {
+                        type: "spring",
+                        stiffness: 200,
+                        damping: 20,
+                      },
+                    }}
+                    whileTap={{
+                      x: Math.random() * 50 - 25,
+                      y: Math.random() * 50 - 25,
+                      transition: {
+                        type: "spring",
+                        stiffness: 200,
+                        damping: 20,
+                      },
+                    }}
+                    onMouseLeave={() => {
+                      controls.start({
+                        x: 0,
+                        y: 0,
+                        transition: {
+                          type: "spring",
+                          stiffness: 100,
+                          damping: 20,
+                        },
+                      });
+                    }}
+                  >
+                    <motion.img
+                      src={skill.icon}
+                      alt={skill.title}
+                      className="m-auto xl:w-[3.1rem] lg:w-[2.7rem] lg:h-[2.7rem] xl:h-[3.1rem] md:h-[2.4rem] md:w-[2.4rem] sm:h-[1.9rem] sm:w-[1.9rem] xs:size-[1.5rem] 2xs:size-[1.2rem]"
+                    />
+                  </motion.div>
+                </Reveal>
+              </motion.li>
             ))}
           </ul>
         </div>
@@ -82,17 +113,48 @@ const Skills = () => {
                 index * 30
               }`}
             >
-              <div
-                className={`relative lg:-top-[2.2rem] sm:-top-[1.5rem] xs:-top-[1.2rem] 2xs:-top-[1.05rem] flex xl:w-[4.5rem] lg:w-[4rem] xl:h-[4.5rem] lg:h-[4rem] md:w-[3.5rem] md:h-[3.5rem] sm:h-[3rem] sm:w-[3rem] xs:size-[2.5rem] 2xs:size-[2.3rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
-                  index * 30
-                }`}
-              >
-                <img
-                  className="m-auto xl:w-[3.1rem] lg:w-[2.7rem] lg:h-[2.7rem] xl:h-[3.1rem] md:h-[2.4rem] md:w-[2.4rem] sm:h-[1.9rem] sm:w-[1.9rem] xs:size-[1.5rem] 2xs:size-[1.2rem]"
-                  src={skill.icon}
-                  alt={skill.title}
-                />
-              </div>
+              <Reveal>
+                <motion.div
+                  className={`relative lg:-top-[2.2rem] sm:-top-[1.5rem] xs:-top-[1.2rem] 2xs:-top-[1.05rem] flex xl:w-[4.5rem] lg:w-[4rem] xl:h-[4.5rem] lg:h-[4rem] md:w-[3.5rem] md:h-[3.5rem] sm:h-[3rem] sm:w-[3rem] xs:size-[2.5rem] 2xs:size-[2.3rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
+                    index * 30
+                  }`}
+                  whileHover={{
+                    x: Math.random() * 50 - 25,
+                    y: Math.random() * 50 - 25,
+                    transition: {
+                      type: "spring",
+                      stiffness: 200,
+                      damping: 20,
+                    },
+                  }}
+                  whileTap={{
+                    x: Math.random() * 50 - 25,
+                    y: Math.random() * 50 - 25,
+                    transition: {
+                      type: "spring",
+                      stiffness: 200,
+                      damping: 20,
+                    },
+                  }}
+                  onMouseLeave={() => {
+                    controls.start({
+                      x: 0,
+                      y: 0,
+                      transition: {
+                        type: "spring",
+                        stiffness: 100,
+                        damping: 20,
+                      },
+                    });
+                  }}
+                >
+                  <img
+                    className="m-auto xl:w-[3.1rem] lg:w-[2.7rem] lg:h-[2.7rem] xl:h-[3.1rem] md:h-[2.4rem] md:w-[2.4rem] sm:h-[1.9rem] sm:w-[1.9rem] xs:size-[1.5rem] 2xs:size-[1.2rem]"
+                    src={skill.icon}
+                    alt={skill.title}
+                  />
+                </motion.div>
+              </Reveal>
             </li>
           ))}
         </ul>
