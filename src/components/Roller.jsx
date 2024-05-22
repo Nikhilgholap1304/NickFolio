@@ -50,7 +50,7 @@ const Roller = ({ direction, id }) => {
 
       case "3":
         if (Max360) {
-          return "left-[600%]";
+          return "left-[480%]";
         } else if (Max500) {
           return "left-[520%]";
         } else if (Max800) {
