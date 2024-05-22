@@ -19,7 +19,7 @@ function App() {
   const projectsRef = useRef(null);
   const skillsRef = useRef(null);
   const contactRef = useRef(null);
-  const TestimonialsRef = useRef(null);
+  const testimonialsRef = useRef(null);
 
   const [activeSectionId, setActiveSectionId] = useState(0);
 
@@ -27,7 +27,7 @@ function App() {
   const isProjectsInView = useInView(projectsRef, { threshold: 0.5 });
   const isSkillsInView = useInView(skillsRef, { threshold: 0.5 });
   const isContactInView = useInView(contactRef, { threshold: 0.5 });
-  const isTestimonialsInView = useInView(TestimonialsRef, { threshold: 0.5 });
+  const isTestimonialsInView = useInView(testimonialsRef, { threshold: 0.5 });
 
   useEffect(() => {
     if (isAboutInView) {
@@ -60,8 +60,8 @@ function App() {
         <div ref={skillsRef}>
           <Skills />
         </div>
-        <div ref={contactRef}>
-          <Contact />
+        <div ref={testimonialsRef}>
+          <Testimonials />
         </div>
         <div ref={contactRef}>
           <Contact />
