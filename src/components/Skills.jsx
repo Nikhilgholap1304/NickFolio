@@ -4,6 +4,7 @@ import Reveal from "./Reveal";
 import Roller from "./Roller";
 import Nickfolio from "../assets/Nickfolio_icon_colored.png";
 import { skillSet } from "../constants/index";
+import brackets from "../assets/svg/Brackets";
 
 const Skills = () => {
   return (
@@ -80,7 +81,14 @@ const Skills = () => {
         </ul>
       </div>
       <div className="md:absolute static xl:top-[42%] lg:top-[45%] md:top-[45%] md:left-1/2 md:-translate-x-1/2 flex items-center justify-center">
-        <h1 className="lg:text-2xl xl:text-4xl md:font-bold font-code uppercase opacity-10 md:text-xl text-3xl 2xs:text-lg 2xs:-mt-6">The skill set system</h1>
+        {/* <h1 className="lg:text-2xl xl:text-4xl md:font-bold font-code uppercase opacity-10 md:text-xl text-3xl 2xs:text-lg 2xs:-mt-6">
+          The skill set system
+        </h1> */}
+        <div className={`tagline flex items-center`}>
+          {brackets("left")}
+          <div className="mx-3 text-n-3">The skill set system</div>
+          {brackets("right")}
+        </div>
       </div>
     </Section>
   );
