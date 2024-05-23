@@ -31,13 +31,6 @@ const Testimonials = () => {
         <div className="sticky top-0 bg-violet-600 h-screen flex items-center overflow-hidden px-5">
           <motion.div className="flex gap-10" style={{x}}>
             <div className=" h-[20rem] w-[15rem] bg-yellow-400 rounded-md"></div>
-            <div className=" h-[20rem] w-[15rem] bg-yellow-400 rounded-md"></div>
-            <div className=" h-[20rem] w-[15rem] bg-yellow-400 rounded-md"></div>
-            <div className=" h-[20rem] w-[15rem] bg-yellow-400 rounded-md"></div>
-            <div className=" h-[20rem] w-[15rem] bg-yellow-400 rounded-md"></div>
-            <div className=" h-[20rem] w-[15rem] bg-yellow-400 rounded-md"></div>
-            <div className=" h-[20rem] w-[15rem] bg-yellow-400 rounded-md"></div>
-            <div className=" h-[20rem] w-[15rem] bg-yellow-400 rounded-md"></div>
           </motion.div>
         </div>
       </div>

@@ -24,6 +24,7 @@ import Tailwind from "../assets/skills/Tailwind.png";
 import Vercel from "../assets/skills/Vercel.png";
 import Vitejs from "../assets/skills/Vitejs.png";
 import Gitlab from "../assets/skills/Gitlab.png";
+import Luffy from "../assets/testimonials/Luffy.png";
 
 export const navigation = [
   {
@@ -281,5 +282,64 @@ export const skillSet = [
     icon: Vitejs,
     width: 50,
     height: 50,
+  },
+];
+
+export const testimonials = [
+  {
+    id: "1",
+    title: "Monkey D Luffy",
+    img: { Luffy },
+    subtitle: "One Piece",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "2",
+    title: "Monkey D Luffy",
+    img: { Luffy },
+    subtitle: "One Piece",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "3",
+    title: "Monkey D Luffy",
+    img: { Luffy },
+    subtitle: "One Piece",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "4",
+    title: "Monkey D Luffy",
+    img: { Luffy },
+    subtitle: "One Piece",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "5",
+    title: "Monkey D Luffy",
+    img: { Luffy },
+    subtitle: "One Piece",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "6",
+    title: "Monkey D Luffy",
+    img: { Luffy },
+    subtitle: "One Piece",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "7",
+    title: "Monkey D Luffy",
+    img: { Luffy },
+    subtitle: "One Piece",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    id: "8",
+    title: "Monkey D Luffy",
+    img: { Luffy },
+    subtitle: "One Piece",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
 ];
