@@ -291,7 +291,7 @@ export const testimonials = [
     title: "Monkey D Luffy",
     img: Luffy,
     subtitle: "One Piece",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    desc: "Hey, I'm Monkey D. Luffy! Nikhil is an amazing friend who never gives up and always pushes forward. He's super talented with all that tech stuff like React and NodeJs.",
   },
   {
     id: "2",
