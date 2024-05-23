@@ -35,16 +35,22 @@ const Testimonials = () => {
             {testimonials.map((item, index) => (
               <div
                 key={item.id}
-                className=" p-10 bg-yellow-400 rounded-md flex flex-col items-center justify-center gap-5 w-[15rem]"
+                className=" py-10 px-5 bg-yellow-400 rounded-md flex flex-col items-center justify-center gap-5 w-[20rem]"
               >
                 <div className="text-4xl">
                   <FaQuoteLeft />
                 </div>
-                <div className="font-Poppins text-center text-xl">
+                <div className="font-serif text-center text-xl">
                   <p>{item.desc}</p>
                 </div>
-                <div className="flex">
-
+                <div className="flex gap-5 justify-center items-center">
+                  <div className="w-15 h-15 rounded-full overflow-hidden object-cover border border-violet-500">
+                    <img src={item.img} alt={item.title} className="object-cover object-center w-full h-full"/>
+                  </div>
+                  <div className="flex flex-col">
+                    <h4 className="text-xl font-bold">{item.title}</h4>
+                    <p>{item.subtitle}</p>
+                  </div>
                 </div>
               </div>
             ))}
