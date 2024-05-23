@@ -347,7 +347,7 @@ export const testimonials = [
     id: "8",
     title: "Lelouch vi Britannia",
     img: Lelouch,
-    subtitle: "Death Note",
+    subtitle: "Code Geass",
     desc: "Nikhil possesses unparalleled intellect and strategic thinking. Their proficiency in tech is impressive, always planning ten steps ahead. Just like me, He lead with vision and precision. If you want a revolutionary in your team, Nikhil is the one to choose.",
   },
 ];

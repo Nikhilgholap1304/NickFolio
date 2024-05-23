@@ -35,7 +35,7 @@ const Testimonials = () => {
             {testimonials.map((item, index) => (
               <div
                 key={item.id}
-                className=" px-8 pb-10 pt-[10rem] bg-yellow-500 rounded-md flex flex-col items-center justify-end gap-5 min-w-[22rem] min-h-[30rem] relative overflow-hidden shadow-lg xl:scale-100 lg:scale-[0.8] md:scale-[0.7] sm:scale-[0.7] xs:scale-[0.6] 2xs:scale-[0.6]"
+                className=" px-8 pb-10 pt-[10rem] bg-yellow-500 rounded-md flex flex-col items-center justify-end gap-5 min-w-[22rem] min-h-[30rem] relative overflow-hidden shadow-lg xl:scale-100 lg:scale-[0.8] md:scale-[0.7] sm:scale-[0.7] xs:scale-[0.6] 2xs:scale-[0.6] 2xs:-ml-[4rem] 2xs:-mr-[2rem] xs:-ml-[4rem] xs:-mr-[2rem]"
               >
                 <div className="text-[10rem] absolute -top-[3rem] left-9 drop-shadow-xl text-violet-600">
                   <FaQuoteLeft />
