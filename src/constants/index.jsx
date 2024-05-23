@@ -24,7 +24,9 @@ import Tailwind from "../assets/skills/Tailwind.png";
 import Vercel from "../assets/skills/Vercel.png";
 import Vitejs from "../assets/skills/Vitejs.png";
 import Gitlab from "../assets/skills/Gitlab.png";
+
 import Luffy from "../assets/testimonials/Luffy.png";
+import Naruto from "../assets/testimonials/Naruto.png";
 
 export const navigation = [
   {
@@ -296,7 +298,7 @@ export const testimonials = [
   {
     id: "2",
     title: "Naruto Uzumaki",
-    img: Luffy,
+    img: Naruto,
     subtitle: "Naruto",
     desc: "Believe it! Nikhil is just like me, never backing down and always aiming for the top! He's a genius with tech, mastering React, NodeJs, and more. He never give up on their dreams and inspire everyone around them. If you want someone with true ninja spirit, Nikhil is your go-to person!",
   },

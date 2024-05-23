@@ -35,15 +35,15 @@ const Testimonials = () => {
             {testimonials.map((item, index) => (
               <div
                 key={item.id}
-                className=" px-7 pb-10 pt-[10rem] bg-yellow-500 rounded-md flex flex-col items-center justify-end gap-5 w-[20rem] min-h-[20rem] relative overflow-hidden shadow-lg"
+                className=" px-8 pb-10 pt-[10rem] bg-yellow-500 rounded-md flex flex-col items-center justify-end gap-5 min-w-[22rem] min-h-[30rem] relative overflow-hidden shadow-lg"
               >
                 <div className="text-[10rem] absolute -top-[3rem] left-9 drop-shadow-xl text-violet-600">
                   <FaQuoteLeft />
                 </div>
-                <div className="font-serif text-center text-xl opacity-70">
+                <div className="font-serif text-xl opacity-70">
                   <p>"{item.desc}"</p>
                 </div>
-                <div className="flex gap-5 justify-center items-center">
+                <div className="flex gap-5 justify-start w-full items-center">
                   <div className="w-15 h-15 rounded-full overflow-hidden object-cover border-solid">
                     <img src={item.img} alt={item.title} className="object-center w-full h-full"/>
                   </div>
