@@ -30,7 +30,7 @@ const Testimonials = () => {
         </div>
       </Section>
       <div className="h-[300vh] relative z-1" ref={targetRef}>
-        <div className="sticky top-0 bg-violet-600 h-screen flex items-center overflow-hidden px-5">
+        <div className="sticky top-0 bg-violet-600 h-screen flex items-center overflow-hidden px-5 pt-[4rem]">
           <motion.div className="flex gap-20" style={{ x }}>
             {testimonials.map((item, index) => (
               <div
