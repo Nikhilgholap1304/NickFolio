@@ -27,6 +27,12 @@ import Gitlab from "../assets/skills/Gitlab.png";
 
 import Luffy from "../assets/testimonials/Luffy.png";
 import Naruto from "../assets/testimonials/Naruto.png";
+import Saitama from "../assets/testimonials/Saitama.png";
+import Okabe from "../assets/testimonials/Okabe.png";
+import Gojo from "../assets/testimonials/Gojo.png";
+import Tanjiro from "../assets/testimonials/Tanjiro.png";
+import Light from "../assets/testimonials/Light.png";
+import Lelouch from "../assets/testimonials/Lelouch.png";
 
 export const navigation = [
   {
@@ -305,42 +311,42 @@ export const testimonials = [
   {
     id: "3",
     title: "Saitama",
-    img: Luffy,
+    img: Saitama,
     subtitle: "One Punch Man",
     desc: "Nikhil ? He's like the Saitama of the tech world. Unstoppable, efficient, and incredibly skilled with all the latest tools. He handle challenges effortlessly and keep things simple and effective. If you need someone who gets the job done with a punch, Nikhil is the one.",
   },
   {
     id: "4",
     title: "Okabe Rintaro",
-    img: Luffy,
+    img: Okabe,
     subtitle: "Steins Gate",
     desc: "Greetings! Hououin Kyouma here to tell you about Mr.Nikhil. A true genius, his skills in coding are as mind-bending as time travel itself. he's dedicated, innovative, and always on the cutting edge of technology, Trust me."
   },
   {
     id: "5",
     title: "Satoru Gojo",
-    img: Luffy,
+    img: Gojo,
     subtitle: "Jujutsu Kaisen",
     desc: "He is like the Gojo of the tech world. Unmatched skills, boundless creativity, and always ahead of the game. He see the big picture and execute flawlessly. If you need someone extraordinary to lead your projects, Nikhil is your best choice",
   },
   {
     id: "6",
     title: "Tanjiro Kamado",
-    img: Luffy,
+    img: Tanjiro,
     subtitle: "Demon Slayer",
     desc: "Nikhil has a heart as strong as their coding skills. He is compassionate, hardworking, and always ready to help others improve. Just like I fight demons, He tackle complex problems with determination and skill. He is a true pillar in any team.",
   },
   {
     id: "7",
     title: "Light Yagami",
-    img: Luffy,
+    img: Light,
     subtitle: "Death Note",
     desc: "Nikhil is a brilliant mind, excelling in every challenge He face. Their mastery of technology and keen problem-solving skills make them indispensable. Like a strategic genius, He always find the best solutions. If you want excellence, Nikhil is the key.",
   },
   {
     id: "8",
     title: "Lelouch vi Britannia",
-    img: Luffy,
+    img: Lelouch,
     subtitle: "Death Note",
     desc: "Nikhil possesses unparalleled intellect and strategic thinking. Their proficiency in tech is impressive, always planning ten steps ahead. Just like me, He lead with vision and precision. If you want a revolutionary in your team, Nikhil is the one to choose.",
   },
