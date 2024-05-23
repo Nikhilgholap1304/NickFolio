@@ -3,6 +3,8 @@ import Section from "./Section";
 import Reveal from "./Reveal";
 import Roller from "./Roller";
 import { motion, useTransform, useScroll } from "framer-motion";
+import { testimonials } from "../constants/index";
+import { FaQuoteLeft } from "react-icons/fa";
 
 const Testimonials = () => {
   const targetRef = useRef(null);
@@ -10,7 +12,7 @@ const Testimonials = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0,1],["1%","-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
   return (
     <>
@@ -29,8 +31,23 @@ const Testimonials = () => {
       </Section>
       <div className="h-[300vh] relative z-1" ref={targetRef}>
         <div className="sticky top-0 bg-violet-600 h-screen flex items-center overflow-hidden px-5">
-          <motion.div className="flex gap-10" style={{x}}>
-            <div className=" h-[20rem] w-[15rem] bg-yellow-400 rounded-md"></div>
+          <motion.div className="flex gap-10" style={{ x }}>
+            {testimonials.map((item, index) => (
+              <div
+                key={item.id}
+                className=" p-10 bg-yellow-400 rounded-md flex flex-col items-center justify-center gap-5 w-[15rem]"
+              >
+                <div className="text-4xl">
+                  <FaQuoteLeft />
+                </div>
+                <div className="font-Poppins text-center text-xl">
+                  <p>{item.desc}</p>
+                </div>
+                <div className="flex">
+
+                </div>
+              </div>
+            ))}
           </motion.div>
         </div>
       </div>
