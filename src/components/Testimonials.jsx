@@ -35,9 +35,9 @@ const Testimonials = () => {
             {testimonials.map((item, index) => (
               <div
                 key={item.id}
-                className=" py-10 px-5 bg-yellow-400 rounded-md flex flex-col items-center justify-center gap-5 w-[20rem]"
+                className=" py-10 px-5 bg-yellow-400 rounded-md flex flex-col items-center justify-end gap-5 w-[20rem] min-h-[20rem] relative overflow-hidden"
               >
-                <div className="text-4xl">
+                <div className="text-[10rem] absolute -top-[3rem] left-9 drop-shadow-xl text-violet-600">
                   <FaQuoteLeft />
                 </div>
                 <div className="font-serif text-center text-xl">
@@ -45,7 +45,7 @@ const Testimonials = () => {
                 </div>
                 <div className="flex gap-5 justify-center items-center">
                   <div className="w-15 h-15 rounded-full overflow-hidden object-cover border border-violet-500">
-                    <img src={item.img} alt={item.title} className="object-cover object-center w-full h-full"/>
+                    <img src={item.img} alt={item.title} className="object-center w-full h-full"/>
                   </div>
                   <div className="flex flex-col">
                     <h4 className="text-xl font-bold">{item.title}</h4>
