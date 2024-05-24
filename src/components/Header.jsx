@@ -110,7 +110,19 @@ const Header = ({ activeSectionId }) => {
                    : "lg:text-n-1/50"
                } lg:leading-5 lg:hover:text-n-1`}
               >
-                <Reveal>{item.title}</Reveal>
+                {!item.onlyMobile && <Reveal>{item.title}</Reveal>}
+                {item.id === "6" && (
+                  <Reveal>
+                    <Button className="flex" white="white">
+                      {item.title}
+                    </Button>
+                  </Reveal>
+                )}
+                {item.id === "7" && (
+                  <Reveal>
+                    <Button className="flex">{item.title}</Button>
+                  </Reveal>
+                )}
               </a>
             ))}
           </div>
