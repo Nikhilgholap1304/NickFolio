@@ -83,3 +83,7 @@ You will find all the components used and you can edit your information accordin
 ### Show your support
 
 Give a ⭐ if you like this website!
+
+## 📄 License
+
+This project is licensed under the [License](LICENSE). Feel free to use, modify, and distribute the code for both personal and commercial projects.
