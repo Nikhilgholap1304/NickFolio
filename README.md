@@ -31,7 +31,7 @@ You can fork this repo to modify and make changes of your own. Please give me pr
 
 ## Built With
 
-My personal portfolio <a href="https://nickfolio.vercel.app/" target="_blank">NickFolio</a> which features my personal details, contact medium, some of my github projects as well as my resume and technical skills.<br/>
+My personal portfolio <a href="https://nickfolio.vercel.app/" target="_blank">NickFolio</a> which features my personal details, contact medium, some of my github projects, my resume and technical skills, as well as some crazy testimonials ( This is gonna be a surprise ) .<br/>
 
 This project was built using these technologies.
 
