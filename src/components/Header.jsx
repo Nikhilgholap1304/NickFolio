@@ -12,7 +12,7 @@ import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Reveal from "./Reveal";
 
-const Header = ({activeSectionId}) => {
+const Header = ({ activeSectionId }) => {
   const pathname = useLocation();
   const [openNavigation, setOpenNavigation] = useState(false);
   const { ref, inView } = useInView({ threshold: 0.5 });
@@ -35,10 +35,12 @@ const Header = ({activeSectionId}) => {
       disablePageScroll();
     }
   };
-  const handleClick = () => {
+  const handleClick = (id) => {
     const nav = document.getElementById("nav");
     if (!openNavigation) return;
-
+    if (id === "7") {
+      handleDownloadCV();
+    }
     nav.style.opacity = 0;
     setTimeout(() => {
       setOpenNavigation(false);
@@ -46,6 +48,13 @@ const Header = ({activeSectionId}) => {
     }, 300);
     enablePageScroll();
   };
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = `/NikhilCV.pdf`;
+    link.download = "NikhilCV.pdf";
+    link.click();
+  };
+
   return (
     <>
       <header
@@ -88,7 +97,7 @@ const Header = ({activeSectionId}) => {
                 ref={ref}
                 key={item.id}
                 href={item.url}
-                onClick={handleClick}
+                onClick={() => handleClick(item.id)}
                 className={`cursor-pointer font-code text-xl uppercase text-n-1 transition-colors hover:text-color-1 ${
                   openNavigation ? "opacity-100" : "opacity-0"
                 } transition-opacity lg:opacity-100
@@ -118,13 +127,13 @@ const Header = ({activeSectionId}) => {
           </motion.div>
         </motion.nav>
         <a
-          href="#signup"
+          href="https://github.com/Nikhilgholap1304/NickFolio"
           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
         >
-          New account
+          Github Repo
         </a>
-        <Button className="hidden lg:flex" href="#login">
-          Sign in
+        <Button className="hidden lg:flex" onClick={handleDownloadCV}>
+          Resume
         </Button>
         <Button
           className="ml-auto lg:hidden"

@@ -62,14 +62,14 @@ export const navigation = [
   },
   {
     id: "6",
-    title: "New account",
-    url: "#signup",
+    title: "Github Repo",
+    url: "https://github.com/Nikhilgholap1304/NickFolio",
     onlyMobile: true,
   },
   {
     id: "7",
-    title: "Sign in",
-    url: "#login",
+    title: "Resume",
+    url: "",
     onlyMobile: true,
   },
 ];

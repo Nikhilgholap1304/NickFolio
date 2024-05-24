@@ -44,7 +44,14 @@ function App() {
       setActiveSectionId(0);
       console.log("null");
     }
-  }, [isAboutInView, isProjectsInView, isSkillsInView, activeSectionId]);
+  }, [
+    isAboutInView,
+    isProjectsInView,
+    isSkillsInView,
+    isTestimonialsInView,
+    isContactInView,
+    activeSectionId,
+  ]);
 
   return (
     <>
