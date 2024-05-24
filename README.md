@@ -59,7 +59,7 @@ This project was built using these technologies.
 
 **📱 Fully Responsive**
 
-**... And many more, just try to explore !**
+**... And many more, just try to explore and get things known !**
 
 ## Getting Started
 
