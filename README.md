@@ -19,9 +19,9 @@
 </center>
 
 <h3 align="center">
-    🔹
+    ☢
     <a href="https://github.com/Nikhilgholap1304/NickFolio/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
+    ✨
     <a href="https://github.com/Nikhilgholap1304/NickFolio/issues">Request Feature</a>
 </h3>
 
