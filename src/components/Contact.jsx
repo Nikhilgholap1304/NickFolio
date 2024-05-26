@@ -29,7 +29,7 @@ const Contact = () => {
           <Reveal>
             <p className="my-6 font-extralight text-center text-xl 2xs:text-base">
               Feel free to shoot me an email if you're not enough busy and thus
-              want to connect! You can also find me on{" "} yes
+              want to connect! You can also find me on{" "}
               <a
                 href="https://www.linkedin.com/in/nikhil-n-gholap/"
                 className="text-violet-500 hover:underline"
