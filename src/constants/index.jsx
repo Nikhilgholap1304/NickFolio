@@ -2,6 +2,7 @@ import graffiti from "../assets/projects/graffiti1.png";
 import weatherly from "../assets/projects/weatherly.png";
 import animiz from "../assets/projects/animiz.png";
 import yoghurtz from "../assets/projects/yoghurtz.png";
+import chatopia from "../assets/projects/chatopia.png";
 
 import Bootstrap from "../assets/skills/Bootstrap.png";
 import CSS from "../assets/skills/CSS.png";
@@ -101,6 +102,30 @@ export const projects = [
   },
   {
     id: "1",
+    title: "Chatopia",
+    img: chatopia,
+    link: {
+      github: "https://github.com/Nikhilgholap1304/Chatopia",
+      live: "https://github.com/Nikhilgholap1304/Chatopia",
+    },
+    tools: [
+      "React",
+      "Firebase",
+      "Zustand",
+      "Tailwind CSS",
+      "Material Tailwind",
+      "SCSS",
+      "MUI",
+      "Framer Motion",
+      "Vercel"
+    ],
+    shortdesc:
+      "Chatopia 🎫 is an comprehensive react chat app which can authorize persons via google and github register/login as Oauth latest. It has good UI, basic features, fully device responsive and still under construction.",
+    fulldesc:
+      "Chatopia 🎫 is an comprehensive react chat app which can authorize persons via google and github register/login as Oauth latest. It has good UI, basic features, fully device responsive and still under construction. Chatopia is a real-time chat application designed for seamless and instant communication 📱. Built using modern web technologies like React and Vite, Chatopia leverages Firebase for its backend services, including real-time database, authentication, and cloud storage. The app supports text messaging, multimedia sharing (photos, videos, and documents), and ensures a user-friendly experience with features such as message timestamps, read receipts, and blocking functionality.",
+  },
+  {
+    id: "2",
     title: "Weatherly",
     img: weatherly,
     link: {
@@ -114,7 +139,7 @@ export const projects = [
       "Weatherly is a sleek React app backed by a powerful API, offering instant weather updates and a detailed 5-day forecast. With global coverage and customizable themes, it's your go-to companion for staying ahead of the weather 🌍☔️.",
   },
   {
-    id: "2",
+    id: "3",
     title: "Yoghurtz",
     img: yoghurtz,
     link: {
@@ -128,7 +153,7 @@ export const projects = [
       "Frontend template for an online yogurt shop, featuring product showcase, contact form, and responsive design. Built with HTML, CSS, and JavaScript.",
   },
   {
-    id: "3",
+    id: "4",
     title: "Animiz",
     img: animiz,
     link: {
